@@ -2,8 +2,8 @@ class Config(object):
     LOGGER = True
 
     # Get this value from my.telegram.org/apps
-    API_ID = 6
-    API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+    API_ID = 20650066
+    API_HASH = "7a4f8ed638f1369a40693574c2835217"
 
     CASH_API_KEY = ""  # Get this value for currency converter from https://www.alphavantage.co/support/#api-key
 
@@ -11,14 +11,14 @@ class Config(object):
 
     EVENT_LOGS = ()  # Event logs channel to note down important bot level events
 
-    MONGO_DB_URI = ""  # Get ths value from cloud.mongodb.com
+    MONGO_DB_URI = "mongodb+srv://anjlnobita:tCUPU9Ty1FFvLumv@cluster0.appf0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"  # Get ths value from cloud.mongodb.com
 
     # Telegraph link of the image which will be shown at start command.
     START_IMG = "https://te.legra.ph/file/40eb1ed850cdea274693e.jpg"
 
     SUPPORT_CHAT = "DevilsHeavenMF"  # Your Telegram support group chat username where your users will go and bother you
 
-    TOKEN = ""  # Get bot token from @BotFather on Telegram
+    TOKEN = "7963650428:AAGvbf9QIAWsZRhv9QGxka33OqqGQtX4axc"  # Get bot token from @BotFather on Telegram
 
     TIME_API_KEY = ""  # Get this value from https://timezonedb.com/api
 
