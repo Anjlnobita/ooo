@@ -3,7 +3,7 @@ import os
 import sys
 import time
 
-import telegram.ext as tg
+from telegram.ext import Application
 from pyrogram import Client, errors
 from telethon import TelegramClient
 
@@ -146,11 +146,11 @@ DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1356469075)
 
 
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
+updater = Application.builder().token(TOKEN).build()
 telethn = TelegramClient("Fallen", API_ID, API_HASH)
 
 pbot = Client("FallenRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-dispatcher = updater.dispatcher
+dispatcher = updater
 
 print("[INFO]: Getting Bot Info...")
 BOT_ID = dispatcher.bot.id
@@ -171,6 +171,6 @@ from FallenRobot.modules.helper_funcs.handlers import (
 )
 
 # make sure the regex handler can take extra kwargs
-tg.RegexHandler = CustomRegexHandler
-tg.CommandHandler = CustomCommandHandler
-tg.MessageHandler = CustomMessageHandler
+updater.RegexHandler = CustomRegexHandler
+updater.CommandHandler = CustomCommandHandler
+updater.MessageHandler = CustomMessageHandler
